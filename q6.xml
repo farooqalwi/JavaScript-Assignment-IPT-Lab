@@ -1,0 +1,24 @@
+<?xml version=”1.0”?>
+<userlist>
+<user>
+<userid>101</userid>
+<username>Farooq</username>
+<address>Khi</address>
+<phone>313</phone>
+<email>farooq@gmail.com</email>
+</user>
+<user>
+<userid>102</userid>
+<username>Alwi</username>
+<address>Lhr</address>
+<phone>131</phone>
+<email>alwi@gmail.com</email>
+</user>
+<user>
+<userid>103</userid>
+<username>Asad</username>
+<address>KPK</address>
+<phone>333</phone>
+<email>asad@gmail.com</email>
+</user>
+</userlist>

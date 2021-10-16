@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+    <h2>4) Develop and demonstrate a HTML5 file that includes JavaScript script that uses
+        functions for the following problems:</h2>
+    <p>a. Parameter: A string</p>
+    <p>Output: The position in the string of the left-most vowel</p>
+    <p>b. Parameter: A number</p>
+    <p>Output: The number with its digits in the reverse order</p>
+    <hr>
+
+    <script>
+        var a = prompt("Enter something: "), b = parseInt(a), z = 0;
+        if (b) {
+            while (b > 0)
+                var r = b % 10, z = z * 10 + r, b = Math.floor(b / 10);
+            document.write("Enter something: " + a + "<br> Given Number In Reverse Order : " + z);
+        }
+        else {
+            a = a.search(/[aeiouAEIOU]/);
+            document.write("The First Occurence Of Vowel is at : " + (a + 1));
+        }
+    </script>
+</body>
+
+</html>

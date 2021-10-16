@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <style>
+        body,
+        p {
+            text-align: center;
+        }
+
+        tr {
+            background-color: wheat;
+        }
+
+        .table {
+            padding-left: 500px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>2) Write a JavaScript that calculates the squares and cubes of the numbers from 0 to 10
+        and outputs HTML text that displays the resulting values in an HTML table format.</h2>
+
+    <script>
+        document.write('<h3><b>SQUARES AND CUBES FROM 0 TO 10</b><hr></h3>');
+        document.write('<div class="table"><table border="2" cellspacing="6">');
+        document.write('<th> Number </th> <th> Square </th> <th> Cube </th>');
+        for (var i = 1; i <= 10; i++)
+            document.write("<tr><td>" + i + "</td><td>" + i * i + "</td><td>" + i * i * i + "</td></tr>");
+        document.write("</table></div>");
+    </script>
+</body>
+
+</html>
