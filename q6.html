@@ -17,46 +17,46 @@
 
     <center>
         <h1><b>User Information</h1>
-        <form name="frm">
-            User ID : <input type="text" name="uname"><br>
-            <input type="button" name="btn" value="Submit" onclick="fncDisplayInfo()">
-        </form>
+            <p>There are 10 users in database, so search by ID: 0 - 9</p>
+        <div style="text-align: left; margin-left: 500px;">
+            User ID : <input type="text" id="userID">
+            <button onclick="showData()" style="width: 70px;">Display</button>
+            <div style="margin-left: 80px;">
+                <p id="id"></p>
+                <p id="name"></p>
+                <p id="contact"></p>
+                <p id="city"></p>
+                <p id="country"></p>
+            </div>
+        </div>
     </center>
 
-    <script language="javascript">
-        function fncDisplayInfo() {
-            var xhttp = null;
-            var flag = 0;
-            var userid = document.frm.uname.value;
-            var xmlDoc = new ActiveXObject("microsoft.xmldom");
-            xmlDoc.load("/q6.xml");
-            var noOfUsers = xmlDoc.getElementsByTagName("userlist")[0].childNodes.length;
-            for (var i = 0; i < parseInt(noOfUsers); i++) {
-                var uid
-                    = xmlDoc.getElementsByTagName("user")[i].childNodes[0].childNodes[0].nodeValue;
-                if (uid == userid) {
-                    document.write("<h1> User Details</h1>");
-                    var userName =
-                        xmlDoc.getElementsByTagName("user")[i].childNodes[1].childNodes[0].nodeValue;
-                    var Address
-                        = xmlDoc.getElementsByTagName("user")[i].childNodes[2].childNodes[0].nodeValue;
-                    var phone =
-                        xmlDoc.getElementsByTagName("user")[i].childNodes[3].childNodes[0].nodeValue;
-                    var email =
-                        xmlDoc.getElementsByTagName("user")[i].childNodes[4].childNodes[0].nodeValue;
-                    document.write("<br><b>User ID :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + uid)
-                    document.write("<br>User Name :&nbsp" + userName);
-                    document.write("<br>Address :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + Address);
-                    document.write("<br>Phone no : &nbsp&nbsp&nbsp&nbsp&nbsp" + phone);
-                    document.write("<br>E - Mail : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + email);
-                    flag = 1;
-                    break;
-                }
-            }
-            if (flag == 0) {
-                alert("InValid User");
-            }
+    <script>
+        // id, name, contact, city, Country
+        const user1 = [0, "Farooq", 03001234567, "Karachi", "Pakistan"];
+        const user2 = [1, "Ahmed", 03451133245, "Lahore", "Pakistan"];
+        const user3 = [2, "Alwi", 03127755324, "Dili", "India"];
+        const user4 = [3, "Saad", 03337755634, "California", "USA"];
+        const user5 = [4, "Akmal", 03222375456, "Dubai", "UAE"];
+        const user6 = [4, "Ajmal", 03223567352, "Abi Zahbi", "UAE"];
+        const user7 = [4, "Shahid", 03222375013, "Peshawar", "Pakistan"];
+        const user8 = [4, "Asad", 03222375032, "Mombai", "India"];
+        const user9 = [4, "Kamal", 03222375123, "Dubai", "UAE"];
+        const user10 = [4, "Noman", 03222375352, "Maxico", "USA"];
+
+        const user = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10]
+
+        function showData() {
+            inedx = document.getElementById("userID").value;
+            document.getElementById("id").innerText = "ID: " + user[inedx][0];
+            document.getElementById("name").innerHTML = "Name: " + user[inedx][1];
+            document.getElementById("contact").innerHTML = "Mobile#: " + user[inedx][2];
+            document.getElementById("city").innerHTML = "City: " + user[inedx][3];
+            document.getElementById("country").innerHTML = "Country: " + user[inedx][4];
+
         }
+
+
     </script>
 </body>
 
